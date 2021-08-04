@@ -8,23 +8,81 @@
     table {
       border-collapse: collapse;
       width: 100%;
+      
     }
     
     th, td {
-      padding: 40px;
+      padding: 10px;
       text-align: left;
       border-bottom: 1px solid #ddd;
+      
     }
+    .button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 2px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 10%;
+}
+.button:hover {
+  background-color: #555;
+}
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 40%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+
+
+
+tr:hover {background-color:white;}
+
     </style>
     </head>
-<body>
+<body bgcolor="azure">
 
 <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="leftMenu">
   <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
   <a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/mobile3.html" class="w3-bar-item w3-button">iPhones</a>
   <a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/SAMSUNG.html" class="w3-bar-item w3-button">Samsung</a>
-  <a href="#" class="w3-bar-item w3-button">OnePlus</a>
-  <a href="#" class="w3-bar-item w3-button">Xaomi</a>
+  <a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/Oneplus.html" class="w3-bar-item w3-button">OnePlus</a>
+  <a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/XAOMI.html" class="w3-bar-item w3-button">Xaomi</a><hr>
+  <a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/project.html" class="w3-bar-item w3-button">Home</a>
+  <a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/laptop(asus).html" class="w3-bar-item w3-button">Laptops</a>
+  <a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/Televisions.html" class="w3-bar-item w3-button">TV's</a>
+  <a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/AC.html" class="w3-bar-item w3-button">AC's</a>
+  <a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/OTHER.html" class="w3-bar-item w3-button">Other Accessories</a>
 </div>
 
 
@@ -36,12 +94,7 @@
     <center><h1>iPhones</h1></center>
   </div>
 </div>
-
-<div class="text">
-<p></p>
-<p></p>
-</div>
-     
+    
 <script>
 function openLeftMenu() {
   document.getElementById("leftMenu").style.display = "block";
@@ -53,87 +106,127 @@ function closeLeftMenu() {
 
 </script>
 <table>
-    <tr>
-      <th><img src="iphone11.png" width="150" height="200"></th>
+    <tr class="container" class="middle">
+      <th><img src="iphone11.png" width="150" height="200" class="image"></th>
       <th style="color: black; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;"><b> Apple Iphone11 64GB - (White)</b><br><br>
-         <font color="gray"> Save extra with No Cost EMI<br><br>
-          FREE Delivery by EShop<br><br>
-          In stock on August 1, 2021
+         <font color="gray"> •64 GB ROM<br>
+          •15.49 cm (6.1 inch) Liquid Retina HD Display<br>
+          •12MP + 12MP | 12MP Front Camera<br>
+          •A13 Bionic Chip Processor<br>
+          <p><button class="button"><a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/checkout.html">Add to cart</a></button></p>
         </font>
       </th>
-    <th>$1000</th>
+    <th>$1000
+      
+    </th>
     </tr>
-    <tr>
-      <td><img src="Screenshot (245).png" width="150" height="200"></td>
+    <tr class="container" class="middle">
+      <td><img src="Screenshot (245).png" width="150" height="200" class="image"></td>
       <td style="color: black; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;"><b>New Apple Iphone12 Pro 128GB - (Pacific Blue)</b><br><br>
-        <font color="gray"><b>Save extra with No Cost EMI<br><br>
-          FREE Delivery by EShop<br><br>
-          In stock on August 1, 2021</b></font>
+        <font color="gray"><b>•128 GB ROM<br>
+          •15.49 cm (6.1 inch) Super Retina XDR Display<br>
+          •12MP + 12MP + 12MP | 12MP Front Camera<br>
+          •A14 Bionic Chip with Next Generation Neural Engine Processor<br>
+          •Ceramic Shield | IP68 Water Resistance<br>
+          •All Screen OLED Display<br>
+          •LiDAR Scanner for Improved AR Experiences</b><br>
+          <p><button class="button"><a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/checkout.html">Add to cart</a></button></p>
+        </font>
       </td>
-      <td>$1200</td>
+      <td><b>$1200</b></td>
     </tr>
-    <tr>
-      <td><img src="Screenshot (246).png" width="150" height="200"></td>
+    <tr class="container" class="middle">
+      <td><img src="Screenshot (246).png" width="150" height="200" class="image"></td>
       <td style="color: black ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;"><b>New Apple Iphone12 Pro Max 512GB - (Graphite)</b><br><br>
-        <font color="gray"><b>Save extra with No Cost EMI<br><br>
-          FREE Delivery by EShop<br><br>
-          In stock on August 1, 2021</b></font>
+        <font color="gray"><b>•512 GB ROM<br>
+          •17.02 cm (6.7 inch) Super Retina XDR Display<br>
+          •12MP + 12MP + 12MP | 12MP Front Camera<br>
+          •A14 Bionic Chip with Next Generation Neural Engine Processor<br>
+          •Ceramic Shield | IP68 Water Resistance<br>
+          •All Screen OLED Display<br>
+          •LiDAR Scanner for Improved AR Experiences</b><br>
+          <p><button class="button"><a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/checkout.html">Add to cart</a></button></p>
+        </font>
           </td>
-          <td>$1500</td>
+          <td><b>$1500</b></td>
     </tr>
-    <tr>
-      <td><img src="Screenshot (250).png" width="150" height="200"></td>
-      <td style="color: black ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;"><b>Samsung Galaxy S21 ULTRA 5G - (Phantom Black)</b><br><br>
-        <font color="gray"><b>Save extra with No Cost EMI<br><br>
-          FREE Delivery by EShop<br><br>
-          In stock on August 1, 2021</b></font>
+    <tr class="container" class="middle">
+      <td><img src="Screenshot (264).png" width="150" height="200" class="image"></td>
+      <td style="color: black ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;"><b>Apple Iphone12 Pro Max 128GB - (Phantom Black)</b><br><br>
+        <font color="gray"><b>•128 GB ROM<br>
+          •17.02 cm (6.7 inch) Super Retina XDR Display<br>
+          •12MP + 12MP + 12MP | 12MP Front Camera<br>
+          •A14 Bionic Chip with Next Generation Neural Engine Processor<br>
+          •Ceramic Shield | IP68 Water Resistance<br>
+          •All Screen OLED Display<br>
+          •LiDAR Scanner for Improved AR Experiences</b><br>
+          <p><button class="button"><a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/checkout.html">Add to cart</a></button></p>
+        </font>
           </td>
-          <td>$1500</td>
+          <td><b>$1500</b></td>
     </tr>
-    <tr>
-      <td><img src="Screenshot (251).png" width="120" height="200"></td>
-      <td style="color: black ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;"><b>Samsung Galaxy A80 - (Angel Gold)</b><br><br>
-        <font color="gray"><b>Save extra with No Cost EMI<br><br>
-          FREE Delivery by EShop<br><br>
-          In stock on August 1, 2021</b></font>
+    <tr class="container" class="middle">
+      <td><img src="Screenshot (257).png" width="150" height="200" class="image"></td>
+      <td style="color: black ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;"><b>Apple Iphone11 64GB - (Yellow)</b><br><br>
+        <font color="gray"><b> •64 GB ROM<br>
+          •15.49 cm (6.1 inch) Liquid Retina HD Display<br>
+          •12MP + 12MP | 12MP Front Camera<br>
+          •A13 Bionic Chip Processor</b><br>
+          <p><button class="button"><a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/checkout.html">Add to cart</a></button></p>
+        </font>
           </td>
-          <td>$800</td>
+          <td><b>$800</b></td>
     </tr>
-    <tr>
-      <td><img src="Screenshot (252).png" width="170" height="200"></td>
-      <td style="color: black ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;"><b>Samsung Galaxy Note 20 - (Mystic Bronze)</b><br><br>
-        <font color="gray"><b>Save extra with No Cost EMI<br><br>
-          FREE Delivery by EShop<br><br>
-          In stock on August 1, 2021</b></font>
+    <tr class="container" class="middle">
+      <td><img src="Screenshot (258).png" width="150" height="200" class="image"></td>
+      <td style="color: black ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;"><b>Apple IphoneXR 128GB - (White)</b><br><br>
+        <font color="gray"><b>•128 GB ROM<br>
+          •15.49 cm (6.1 inch) Display<br>
+          •12MP Rear Camera | 7MP Front Camera<br>
+          •A12 Bionic Chip Processor</b><br>
+          <p><button class="button"><a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/checkout.html">Add to cart</a></button></p>
+        </font>
           </td>
-          <td>$1700</td>
+          <td><b>$700</b></td>
     </tr>
-    <tr>
-      <td><img src="Screenshot (253).png" width="150" height="200"></td>
-      <td style="color: black ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;"><b>OnePlus 7pro - (Mirror Grey)</b><br><br>
-        <font color="gray"><b>Save extra with No Cost EMI<br><br>
-          FREE Delivery by EShop<br><br>
-          In stock on August 1, 2021</b></font>
+    <tr class="container" class="middle">
+      <td><img src="Screenshot (259).png" width="150" height="200" class="image"></td>
+      <td style="color: black ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;"><b>Apple IphoneXR 64GB - (Black)</b><br><br>
+        <font color="gray"><b>•64 GB ROM<br>
+          •15.49 cm (6.1 inch) Display<br>
+          •12MP Rear Camera | 7MP Front Camera<br>
+          •A12 Bionic Chip Processor</b><br>
+          <p><button class="button"><a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/checkout.html">Add to cart</a></button></p>
+        </font>
           </td>
-          <td>$500</td>
+          <td><b>$700</b></td>
     </tr>
-    <tr>
-      <td><img src="Screenshot (254).png" width="150" height="200"></td>
-      <td style="color: black ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;"><b>OnePlus Nord CE 5G - (Charcoal ink)</b><br><br>
-        <font color="gray"><b>Save extra with No Cost EMI<br><br>
-          FREE Delivery by EShop<br><br>
-          In stock on August 1, 2021</b></font>
+    <tr class="container" class="middle">
+      <td><img src="Screenshot (263).png" width="150" height="200" class="image"></td>
+      <td style="color: black ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;"><b>Apple Iphone12 128GB - (Green)</b><br><br>
+        <font color="gray"><b>•128 GB ROM<br>
+          •15.49 cm (6.1 inch) Super Retina XDR Display<br>
+          •12MP + 12MP | 12MP Front Camera<br>
+          •A14 Bionic Chip with Next Generation Neural Engine Processor<br>
+          •Ceramic Shield<br>
+          •IP68 Water Resistance<br>
+          •All Screen OLED Display</b><br>
+          <p><button class="button"><a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/checkout.html">Add to cart</a></button></p>
+        </font>
           </td>
-          <td>$250</td>
+          <td><b>$1150</b></td>
     </tr>
-    <tr>
-      <td><img src="Screenshot (255).png" width="110" height="200"></td>
-      <td style="color: black ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;"><b>OnePlus 8T 5G - (Lunar Silver)</b><br><br>
-        <font color="gray"><b>Save extra with No Cost EMI<br><br>
-          FREE Delivery by EShop<br><br>
-          In stock on August 1, 2021</b></font>
+    <tr class="container" class="middle">
+      <td><img src="Screenshot (260).png" width="150" height="200" class="image"></td>
+      <td style="color: black ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;"><b>Apple IphoneXR 64GB - (Red)</b><br><br>
+        <font color="gray"><b>•64 GB ROM<br>
+          •15.49 cm (6.1 inch) Display<br>
+          •12MP Rear Camera | 7MP Front Camera<br>
+          •A12 Bionic Chip Processor</b><br>
+          <p><button class="button"><a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/checkout.html">Add to cart</a></button></p>
+        </font>
           </td>
-          <td>$350</td>
+          <td> <b>$700</b></td>
     </tr>
   </table>
      

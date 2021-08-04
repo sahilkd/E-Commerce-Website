@@ -1,79 +1,381 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> EShop(Electronics)</title>
         <style>
-        ul {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-          overflow: hidden;
-          background-color: #333;
-        }
         
-        li {
-          display: inline-block;
-        }
-        
-        li a {
-          display: block;
-          color: white;
-          text-align: center;
-          padding: 14px 16px;
-          text-decoration: none;
-        }
-        
-        li a:hover {
-          background-color: #111;
-        }
+
+
+
+body, html {
+    height: 100%;
+}
+
+
+.hero-image {
+  
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("background2.jpg");
+
+  
+  height: 50%;
+
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.navbar1{
+    display: flex;
+    /* height: 100px; */
+    /* background-color: black; */
+    align-items: center;   
+    position: sticky;
+    top: 0px;
+}
+
+.navbar1::before{
+    content: "";
+    /* background-color: Black; */
+    /* background-color: white; */
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* .navbar img{
+    width: 80px;
+    height: 80px;
+    margin: 7px;
+} */
+
+.logo img{
+    height: 130px;
+    margin: 3px 6px;
+}
+
+/* Navigation Bar: List Styling */
+
+.navbar1 ul{
+    display: flex;
+    /* padding: 2px; */
+    font-family: 'Baloo Bhai', cursive;
+}
+
+.navbar1 ul li{
+    /* display: inline-block;
+    padding: 5px;
+    margin: 3px;
+    font-size: 18px; */
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+.navbar1 ul li a{
+    color: white;
+    /* color: black; */
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.navbar1 ul li a:hover{
+    color: black;
+    /* color: white; */
+    background-color: white;
+    /* background-color: black; */
+}
+
+/* .home{
+    display: flex;
+    justify-content: center;
+    background: url(img/bg1.jpg);
+    height: ;
+} */
+
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px ;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{
+    content: "";
+    position: absolute;
+    background: url(img/3.jpg) no-repeat center/cover;
+    height: 642px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+#home h1{
+    color: white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+   
+:root {
+    --primary:#EEBF00;
+    --secondary:#232B38;
+    --ternary:#6C6C6C;
+    --danger:#FE4545;
+    --pure:#FEFEFE;
+    --light:#F0F0F0;
+    --heaven:#FFFFFF;
+    --footer:#2D333F;
+}
+
+
+
+footer{
+    background:var(--footer);
+    padding:4rem 0;
+}
+footer .container{
+    display:flex;
+    color:var(--pure);
+}
+
+footer .box{
+    flex:1;
+    margin-right:2rem;
+    text-align:center;
+}
+
+footer .instagram-api img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+footer .instagram-api .post-wrap{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+footer .instagram-api .post-wrap > div{
+    width: calc(1/3*100% - (1 - 1/3)*10px);
+    margin-bottom:10px;
+}
+footer .box ul{
+    list-style-type: none;
+}
+footer .box ul li a{
+    color:var(--pure);
+    text-decoration: none;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+footer .box ul li a:hover{
+    color:var(--primary);
+}
+footer .box h3{
+    border-bottom:1px solid var(--primary);
+    padding-bottom:1rem;
+    margin-bottom:1rem;
+}
+
+footer .box p{
+    line-height: 1.6;
+    margin-bottom:1rem;
+}
+footer .box ul li{
+    margin-bottom:1rem;
+}
+footer .box:nth-child(3) > div {
+    display:flex;
+    justify-content: center;
+}
+footer .box:nth-child(3){
+    text-align: left;
+}
+footer .box:nth-child(3) h3{
+    text-align: center;
+}
+footer .box:nth-child(3) > div img{
+    margin-right:1rem;
+}
+footer .box:nth-child(3) ul li{
+    margin-bottom:1.5rem;
+}
+
+footer.copyright{
+    padding:1rem 0;
+    background: var(--secondary);
+    color:var(--pure);
+    text-align: center;
+    font-size: 0.75rem;
+}
+footer.copyright a{
+    color:var(--primary);
+    text-decoration: none;
+}
+
+
+
+    footer .instagram-api .post-wrap > div{
+        width:calc(1/2*100% - (1 - 1/3)*10px);
+    }
+
+
+@media (max-width:768px){
+    .about-meal .about-meal-wrap{
+        flex-direction: column;
+    }
+    .about-meal .about-meal-wrap img{
+        width:100%;
+        margin-bottom: 2rem;
+    }
+
+    section.our-services .card-wrapper{
+        flex-direction:column;
+    }
+    section.our-services .card-wrapper .service-card{
+        margin-bottom:6rem;
+    }
+    footer .container{
+        flex-direction: column;
+    }
+    footer .box{
+        text-align: left;
+        margin-right:0;
+        margin-bottom:3rem;
+    }
+    footer .box:nth-child(3) h3{
+        text-align:left;
+    }
+    footer .box:nth-child(3) > div{
+        display:block;
+    }
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.pill-nav a {
+  display: center;
+  color: black;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 5px;
+}
+
+.pill-nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.pill-nav a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+
         </style>
         </head>
-<body>
-   
-        <center><img src="background2.jpg" width="1620" height="690" </center><br><br>
-        <center>
-            <ul>
-                <li><a class="active" href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/mobile3.html">Mobiles</a></li>
-                <li><a href="">Laptops</a></li>
-                <li><a href="">TVs</a></li>
-                <li><a href="">ACs</a></li>
-                <li><a href="">Othe Accessories</a></li>
-              </ul>
-              <br><br><hr width="600px">
+<body bgcolor="white">
+  <nav class="navbar1">
+    <div class="logo">
+        <img src="lgo.png" alt="">
+    </div>
+    <ul>
+        <li><a href="main-page.html">Home</a></li>
+        <li><a href="">Electronics</a></li>
+        <li><a href="">Books</a></li>
+        <li><a href="">Grocery</a></li>
+        
+    </ul>
+</nav>
+   <br><br>
+   <div class="hero-image">
+    <div class="hero-text">
+      <font color="white" face="georgia" size="5"><h1>SPECIAL SUMMER OFFERS</h1>
+      <p>Don't miss a chance and shop with EShop</p>
+      <button>SHOP NOW</button></font>
+    </div>
+  </div>
+<br><br>
+<div class="pill-nav">
+  <center>
+    <a  href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/mobile3.html"><b>Mobiles</b></a>
+    <a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/laptop(asus).html"><b>Laptops</b></a>
+    <a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/Televisions.html"><b>TV's</b></a>
+    <a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/AC.html"><b>AC's</b></a>
+    <a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/OTHER.html"><b>Other Accessories</b></a>
+    </center>
+  </div>
+              <br><br><hr width="1000px">
             
             <h1> 
-                <font color="orange" face="" size="7">
-                    <marquee width="30%" direction="left" height="100px"><u>Mobiles & Laptops</font></u></marquee>
-                </font>
+                <center>
+                <font color="teal" face="georgia" size="7">
+                    <marquee behavior="alternate" width="50%" direction="left" height="100px">SHOP SAFELY WITH ESHOP</font></marquee>
+                </center></font>
             </h1>
-        </center><hr width="600px"><br><br><br><br>
+        </center><hr width="1000px"><br><br><br><br>
 
        
-
+<center>
 <table>
     <tr>
         
-        <img src="phonepic.jpg" width="700" height="500">
+        <img src="Screenshot (288).png" width="1500" height="200">
+        
+    </tr>
+    
+</table></center><br>
+<center>
+<table>
+    <tr>
+       
+        <img src="banner.png" width="900" height="400">
         
     </tr>
     <tr>
-      
+       
         &nbsp;&nbsp;&nbsp;
-        <img src="laptop.jpg" width="700" height="500">
-  
+        <img src="banner1.jpg" width="900" height="400">
+        
     </tr>
-</table><br>
+</table></center><br><br>
 
-<center><h1>
-    <font color="green" face="cursive" size="6">
-        You can get all brands of mobiles here<br> 
-furthermore we also sell laptops you can view your favourite one and proceed to buy<br>
-        Click on above images to view Mobiles & Laptops.
-    </font><br><br>
-</h1></center>
 <hr width="600px">
 <center><h1> 
-    <font color="orange" face="" size="7">
-        <marquee width="30%" direction="left" height="100px"><u>Television & Air Conditioners</font></u></marquee>
+    <font color="teal" face="georgia" size="7">
+        <marquee behavior="alternate" width="30%" direction="left" height="100px">HIGHLIGHTS</font></marquee>
     </font>
 </h1></center><hr width="600px"><br><br><br><br>
 <center><table>
@@ -89,22 +391,21 @@ furthermore we also sell laptops you can view your favourite one and proceed to 
         
     </tr>
 </table></center><br><br>
-<h1>
-    <font color="green" face="cursive" size="6">
-       All new brands of TVs & ACs Available for resonable price<br> 
-TVs with 8K, 1080P, High Refresh Frame Rate available(For Now) <br>
-          Click on above images to view your favourite TVs & ACs. 
-    </font><br><br>
-</h1>
-<hr width="600px">
-<center>
-    <h1> 
-        <font color="orange" face="" size="7">
-            <marquee width="30%" direction="left" height="100px"><u>More E-Products </font></u></marquee>
-        </font>
-    </h1>
-</center><hr width="600px"><br><br><br><br>
-<table>
+<center><table>
+    <tr>
+        
+        <img src="phonepic.jpg" width="700" height="500">
+        
+    </tr>
+    <tr>
+       
+        &nbsp;&nbsp;&nbsp;
+        <img src="laptop.jpg" width="700" height="500">
+        
+    </tr>
+    
+</table></center><br><br>
+<center><table>
     <tr>
        
         <img src="rg3.jpg" width="700" height="500">
@@ -116,60 +417,129 @@ TVs with 8K, 1080P, High Refresh Frame Rate available(For Now) <br>
         <img src="wm1.png" width="700" height="500">
         
     </tr>
+</table></center><br><br>
+<h1 class="">
+    <center>
+    <font color="orange" face="times new Roman" size="6">
+        Whether you're setting up a new home or simply looking for an upgrade, <br>
+        ESHOP offers an eclectic range of electronics to suit your needs. <br>
+        Browse through an array of Home & Kitchen Appliances such as Air Conditioners, Refrigerators, Washing Machines, Vacuum Cleaners,<br>
+        Microwave, Air Fryers, Soup Makers, Cooktops, Dishwashers, Water Heaters and many more such product categories. 
+    </center></font><br><br>
+</h1>
+<hr width="600px">
+<center>
+    <h1> 
+        <font color="teal" face="georgia" size="7">
+            <marquee behavior="alternate" width="30%" direction="left" height="100px">POPULAR BRANDS </font></marquee>
+        </font>
+    </h1>
+</center><hr width="600px"><br><br><br><br>
+<center><table>
+    <tr>
+       
+        <img src="apple2.jpg" width="800" height="500">
+        
+    </tr>
+    <tr>
+       
+        &nbsp;&nbsp;&nbsp;
+        <img src="lg2.jpg" width="600" height="600">
+        
+    </tr>
 </table><br><br>
-<h1>
-    <font color="green" face="cursive" size="6">
-       To view more Electronic Products click on the above Images<br> 
+<table>
+    <tr>
+       
+        <img src="samsung1.jpg" width="800" height="500">
+        
+    </tr>
+    <tr>
+       
+        &nbsp;&nbsp;&nbsp;
+        <img src="asus1.jpg" width="700" height="600">
+        
+    </tr>
+</table></center><br><br>
 
-          
-    </font><br><br>
 </h1><hr>
 
-<h2><font color="darkblue" face="monospace" size="6">
+<footer>
+  <div class="container">
+      <div class="box">
+          <h3>About us</h3>
+          <p>It was popularised in the 1960 with the release of Latest sheets containing Lorem Ipsum
+              passage.</p>
+          <button class="btn btn-secondary">Read More</button>
+      </div>
+      <div class="box">
+          <h3>Quik Links</h3>
+          <ul>
+              <li>
+                  <a href="#">Home</a>
+              </li>
+              <li>
+                  <a href="#">About us</a>
+              </li>
+              <li>
+                  <a href="#">Products</a>
+              </li>
+              <li>
+                  <a href="#">Blog</a>
+              </li>
+              <li>
+                  <a href="#">Services</a>
+              </li>
+              <li>
+                  <a href="#">Gallery</a>
+              </li>
+              <li>
+                  <a href="#">Contact us</a>
+              </li>
 
-   <u>You can submit your review here</u></font></h2>
-
-<form action="/action_page.php" align="left">
- <fieldset>
-  <legend><b>REVIEW:</b></legend>
-  <label for="fname"><strong>First name:</strong></label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname"><strong>Last name:</strong></label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <label for="email"><strong>Email:</strong></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <input type="email" id="email" name="email"><br><br>
-  <label for="birthday"><strong>Birthday:</strong></label>&nbsp;&nbsp;&nbsp;&nbsp;
-  <input type="date" id="birthday" name="birthday"><br><br>
-  <label for="phone"><strong>Enter a phone number:</strong></label><br><br>
-  <input type="tel" id="phone" name="phone" placeholder="1234567890" pattern="[0-10]{10}-[0-10]{10}-[0-10]{10}"><br>
- 
- 
-  <p><strong>Products you liked:</strong></p>
-  
-  <form action="/action_page.php">
-    <input type="checkbox" id="Mobiles & Laptops" name="Mobiles & Laptops" value="Mobiles & Laptops">
-    <label for="Mobiles & Laptops"> Mobiles & Laptops</label><br>
-    <input type="checkbox" id="TVs & ACs" name="TVs & ACs" value="TVs & ACs">
-    <label for="TVs & ACs"> TVs & ACs</label><br>
-    <input type="checkbox" id=" Other Accessories" name=" Other Accessories" value=" Other Accessories">
-    <label for=" Other Accessories"> Other Accessories</label><br><br>
-    <label for="rating"><strong>Rate out of 5:</strong></label>
-  <select id="rating" name="cars">
-    <option value="rating">5</option>
-    <option value="rating">4</option>
-    <option value="rating">3</option>
-    <option value="rating">2</option>
-    <option value="rating">1</option>
-  </select><br><br>
-    <label for="review"><strong>Review:</strong></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <input size="100" type="text" id="review" name="review"><br><br>
- 
-  <input type="submit" value="Submit">
-  <input type="reset" value="Reset">
-</fieldset>
-</form><br><br>
-
-<img src="orange.jpg" width="1850" height="600"><hr>
+          </ul>
+      </div>
+      <div class="box">
+          <h3>Follow Us</h3>
+          <div>
+              <ul>
+                  <li>
+                      <a href="https://www.facebook.com/codersgyan">
+                          <img src="./icons/facebook.svg" alt="">
+                          <span>Facebook</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://twitter.com/CoderGyan">
+                          <img src="./icons/twitter.svg" alt="">
+                          <span>Twitter</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                          <img src="./icons/google.svg" alt="">
+                          <span>Google +</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://www.instagram.com/codersgyan/">
+                          <img src="./icons/instagram.svg" alt="">
+                          <span>Instagram</span>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+     
+</footer>
+<footer class="copyright">
+  <div>
+      Copyright © 2020 .All rights reserved by <a href="https://www.instagram.com/codersgyan/">Coder's Gyan</a>.
+  </div>
+</footer>
+</div>
+</div>
+</div>
 
 
 

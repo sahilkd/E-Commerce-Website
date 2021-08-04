@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Mobile(Samsung)</title>
+<title>Mobiles(Samsung)</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <head>
@@ -11,20 +11,75 @@
     }
     
     th, td {
-      padding: 40px;
+      padding: 10px;
       text-align: left;
       border-bottom: 1px solid #ddd;
     }
+    .button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 2px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 10%;
+}
+.button:hover {
+  background-color: #555;
+}
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 25%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+
+
+
+tr:hover {background-color:white;}
     </style>
     </head>
-<body>
+<body bgcolor="azure">
 
 <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="leftMenu">
   <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
   <a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/mobile3.html" class="w3-bar-item w3-button">iPhones</a>
   <a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/SAMSUNG.html" class="w3-bar-item w3-button">Samsung</a>
-  <a href="#" class="w3-bar-item w3-button">OnePlus</a>
-  <a href="#" class="w3-bar-item w3-button">Xaomi</a>
+  <a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/Oneplus.html" class="w3-bar-item w3-button">OnePlus</a>
+  <a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/XAOMI.html" class="w3-bar-item w3-button">Xaomi</a><hr>
+  <a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/project.html" class="w3-bar-item w3-button">Home</a>
+  <a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/laptop(asus).html" class="w3-bar-item w3-button">Laptops</a>
+  <a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/Televisions.html" class="w3-bar-item w3-button">TV's</a>
+  <a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/AC.html" class="w3-bar-item w3-button">AC's</a>
+  <a href="file:///C:/Users/sahil/OneDrive/Desktop/WebDev/OTHER.html" class="w3-bar-item w3-button">Other Accessories</a>
 </div>
 
 
@@ -33,7 +88,7 @@
   <button class="w3-button w3-teal w3-xlarge w3-left" onclick="openLeftMenu()">&#9776;</button>
   
   <div class="text">
-    <center><h1>Samsung</h1></center>
+    <center><h1>SAMSUNG</h1></center>
   </div>
 </div>
 
@@ -53,89 +108,118 @@ function closeLeftMenu() {
 
 </script>
 <table>
-    <tr>
-      <th><img src="Screenshot (250).png" width="150" height="200"></th>
-      <th style="color: black; font-family: Georgia, 'Times New Roman', Times, serif; font-size: large;">New Apple Iphone11 64GB - (White)<br><br>
-          Save extra with No Cost EMI<br><br>
-          FREE Delivery by EShop<br><br>
-          In stock on August 1, 2021
-  
+    <tr class="container" class="middle">
+      <th><img src="Screenshot (271).png" width="120" height="200" class="image"></th>
+      <th style="color: black; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;"><b> Samsung S20 Ultra 128GB - (Cosmic Gray)</b><br><br>
+         <font color="gray"> •12 GB RAM | 128 GB ROM | Expandable Upto 1 TB<br>
+          •17.53 cm (6.9 inch) Quad HD+ Display<br>
+          •108 MP + 48 MP + 12 MP + VGA Depth Camera | 40MP Front Camera<br>
+          •5000 mAh Lithium-ion Battery<br>
+          •Exynos 990 Processor<br>
+          •Super AMOLED Display<br>
+          <p><button class="button">Add to cart</button></p>
+        </font>
       </th>
-    <th>$1000</th>
+    <th>$1200</th>
     </tr>
-    <tr>
-      <td><img src="Screenshot (251).png" width="110" height="200"></td>
-      <td style="color: black; font-family: Georgia, 'Times New Roman', Times, serif; font-size: large;"><b>New Apple Iphone12 Pro 128GB - (Pacific Blue)<br><br>
-          Save extra with No Cost EMI<br><br>
-          FREE Delivery by EShop<br><br>
-          In stock on August 1, 2021</b>
+    <tr class="container" class="middle">
+      <td><img src="Screenshot (272).png" width="120" height="200" class="image"></td>
+      <td style="color: black; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;"><b>Samsung S21 Ultra 256GB - (Phantom Silver)</b><br><br>
+        <font color="gray"><b>•12 GB RAM | 256 GB ROM<br>
+          •17.27 cm (6.8 inch) Quad HD+ Display<br>
+          •108MP + 12MP + 10MP + 10MP | 40MP Front Camera<br>
+          •5000 mAh Lithium-ion Battery<br>
+          •Exynos 2100 Processor</b><br>
+          <p><button class="button">Add to cart</button></p></font>
       </td>
-      <td>$1200</td>
+      <td><b>$1500</b></td>
     </tr>
-    <tr>
-      <td><img src="Screenshot (252).png" width="170" height="200"></td>
-      <td style="color: black ; font-family: Georgia, 'Times New Roman', Times, serif; font-size: large;"><b>New Apple Iphone12 Pro Max 512GB - (Graphite)<br><br>
-          Save extra with No Cost EMI<br><br>
-          FREE Delivery by EShop<br><br>
-          In stock on August 1, 2021</b>
+    <tr class="container" class="middle">
+      <td><img src="Screenshot (273).png" width="120" height="200" class="image"></td>
+      <td style="color: black ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;"><b>Samsung S21 128GB - (Phantom Violet)</b><br><br>
+        <font color="gray"><b>•8 GB RAM | 128 GB ROM<br>
+          •15.75 cm (6.2 inch) Full HD+ Display<br>
+          •64MP + 12MP + 12MP | 10MP Front Camera<br>
+          •4000 mAh Lithium-ion Battery<br>
+          • Exynos 2100 Processor</b><br>
+          <p><button class="button">Add to cart</button></p></font>
           </td>
-          <td>$1500</td>
+          <td><b>$1100</b></td>
     </tr>
-    <tr>
-      <td><img src="Screenshot (250).png" width="150" height="200"></td>
-      <td style="color: black ; font-family: Georgia, 'Times New Roman', Times, serif; font-size: large;"><b>Samsung Galaxy S21 ULTRA 5G - (Phantom Black)<br><br>
-          Save extra with No Cost EMI<br><br>
-          FREE Delivery by EShop<br><br>
-          In stock on August 1, 2021</b>
+    <tr class="container" class="middle">
+      <td><img src="Screenshot (274).png" width="120" height="200" class="image"></td>
+      <td style="color: black ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;"><b>Samsung Galaxy A31 128GB - (Prism Crush Blue)</b><br><br>
+        <font color="gray"><b>•6 GB RAM | 128 GB ROM | Expandable Upto 512 GB<br>
+          •16.26 cm (6.4 inch) Full HD+ Display<br>
+          •48MP + 8MP + 5MP + 5MP | 20MP Front Camera<br>
+          •5000 mAh Lithium-ion Battery<br>
+          •MediaTek (MT6768) Octa Core Processor<br>
+          •Super AMOLED Display</b><br>
+          <p><button class="button">Add to cart</button></p></font>
           </td>
-          <td>$1500</td>
+          <td><b>$500</b></td>
     </tr>
-    <tr>
-      <td><img src="Screenshot (251).png" width="120" height="200"></td>
-      <td style="color: black ; font-family: Georgia, 'Times New Roman', Times, serif; font-size: large;"><b>Samsung Galaxy A80 - (Angel Gold)<br><br>
-          Save extra with No Cost EMI<br><br>
-          FREE Delivery by EShop<br><br>
-          In stock on August 1, 2021</b>
+    <tr class="container" class="middle">
+      <td><img src="Screenshot (275).png" width="120" height="200" class="image"></td>
+      <td style="color: black ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;"><b>Samsung Galaxy M11 64GB - (Black)</b><br><br>
+        <font color="gray"><b>•4 GB RAM | 64 GB ROM | Expandable Upto 512 GB<br>
+          •16.26 cm (6.4 inch) HD+ Display<br>
+          •13MP + 5MP + 2MP | 8MP Front Camera<br>
+          •5000 mAh Lithium-ion Battery<br>
+          •Qualcomm Snapdragon (SDM450-F01) Octa Core Processor</b><br>
+          <p><button class="button">Add to cart</button></p></font>
           </td>
-          <td>$800</td>
+          <td><b>$300</b></td>
     </tr>
-    <tr>
-      <td><img src="Screenshot (252).png" width="170" height="200"></td>
-      <td style="color: black ; font-family: Georgia, 'Times New Roman', Times, serif; font-size: large;"><b>Samsung Galaxy Note 20 - (Mystic Bronze)<br><br>
-          Save extra with No Cost EMI<br><br>
-          FREE Delivery by EShop<br><br>
-          In stock on August 1, 2021</b>
+    <tr class="container" class="middle"> 
+      <td><img src="Screenshot (276).png" width="150" height="200" class="image"></td>
+      <td style="color: black ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;"><b>Samsung Galaxy Note 9 128GB - (Metallic Copper)</b><br><br>
+        <font color="gray"><b>•6 GB RAM | 128 GB ROM | Expandable Upto 512 GB<br>
+          •16.26 cm (6.4 inch) Quad HD+ Display<br>
+          •12MP + 12MP | 8MP Front Camera<br>
+          •4000 mAh Lithium-ion Battery</b><br>
+          <p><button class="button">Add to cart</button></p></font>
           </td>
-          <td>$1700</td>
+          <td><b>$800</b></td>
     </tr>
-    <tr>
-      <td><img src="Screenshot (253).png" width="150" height="200"></td>
-      <td style="color: black ; font-family: Georgia, 'Times New Roman', Times, serif; font-size: large;"><b>OnePlus 7pro - (Mirror Grey)<br><br>
-          Save extra with No Cost EMI<br><br>
-          FREE Delivery by EShop<br><br>
-          In stock on August 1, 2021</b>
+    <tr class="container" class="middle">
+      <td><img src="Screenshot (285).png" width="120" height="200" class="image"></td>
+      <td style="color: black ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;"><b>Samsung Galaxy F12 128GB - (Celestial Black)</b><br><br>
+        <font color="gray"><b>•4 GB RAM | 128 GB ROM | Expandable Upto 512 GB<br>
+          •16.55 cm (6.515 inch) HD+ Display<br>
+          •48MP + 5MP + 2MP + 2MP | 8MP Front Camera<br>
+          •6000 mAh Lithium-ion Battery<br>
+          •Exynos 850 Processor</b><br>
+          <p><button class="button">Add to cart</button></p></font>
           </td>
-          <td>$500</td>
+          <td><b>$250</b></td>
     </tr>
-    <tr>
-      <td><img src="Screenshot (254).png" width="150" height="200"></td>
-      <td style="color: black ; font-family: Georgia, 'Times New Roman', Times, serif; font-size: large;"><b>OnePlus Nord CE 5G - (Charcoal ink)<br><br>
-          Save extra with No Cost EMI<br><br>
-          FREE Delivery by EShop<br><br>
-          In stock on August 1, 2021</b>
+    <tr class="container" class="middle">
+      <td><img src="Screenshot (287).png" width="120" height="200" class="image"></td>
+      <td style="color: black ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;"><b>Samsung Galaxy S10 Plus 1TB - (Ceramic White)</b><br><br>
+        <font color="gray"><b>•12 GB RAM | 1 TB ROM | Expandable Upto 512 GB<br>
+          •16.26 cm (6.4 inch) Quad HD+ Display<br>
+          •16MP + 12MP | 10MP + 8MP Dual Front Camera<br>
+          •4100 mAh Lithium-ion Battery<br>
+          •Exynos 9 9820 Processor</b><br>
+          <p><button class="button">Add to cart</button></p></font>
           </td>
-          <td>$250</td>
+          <td><b>$1350</b></td>
     </tr>
-    <tr>
-      <td><img src="Screenshot (255).png" width="110" height="200"></td>
-      <td style="color: black ; font-family: Georgia, 'Times New Roman', Times, serif; font-size: large;"><b>OnePlus 8T 5G - (Lunar Silver)<br><br>
-          Save extra with No Cost EMI<br><br>
-          FREE Delivery by EShop<br><br>
-          In stock on August 1, 2021</b>
+    <tr class="container" class="middle">
+      <td><img src="Screenshot (286).png" width="120" height="200" class="image"></td>
+      <td style="color: black ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;"><b>Samsung Galaxy S10 Plus 512GB - (Ceramic Black)</b><br><br>
+        <font color="gray"><b>•8 GB RAM | 512 GB ROM | Expandable Upto 512 GB<br>
+          •16.26 cm (6.4 inch) Quad HD+ Display<br>
+          •16MP + 12MP | 10MP + 8MP Dual Front Camera<br>
+          •4100 mAh Lithium-ion Battery<br>
+          •Exynos 9 9820 Processor</b><br>
+          <p><button class="button">Add to cart</button></p></font>
           </td>
-          <td>$350</td>
+          <td> <b>$1200</b></td>
     </tr>
   </table>
      
 </body>
 </html>
+
